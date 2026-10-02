@@ -2,9 +2,9 @@ name: Deployment Pipeline
 
 on:
   push:
-    branches: [main]
     tags:
       - 'v*'
+  workflow_dispatch:
 
 jobs:
   build-and-package:
@@ -23,7 +23,7 @@ jobs:
           context: .
           file: infrastructure/docker/backend.Dockerfile
           push: false
-          tags: ai-senior-x/backend:latest
+          tags: ai-senior-x-backend:latest
 
       - name: Build Frontend Docker Image
         uses: docker/build-push-action@v5
@@ -31,6 +31,6 @@ jobs:
           context: .
           file: infrastructure/docker/frontend.Dockerfile
           push: false
-          tags: ai-senior-x/frontend:latest
+          tags: ai-senior-x-frontend:latest
           build-args: |
             NEXT_PUBLIC_API_BASE_URL=http://localhost:8000
