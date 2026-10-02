@@ -22,6 +22,9 @@ COPY pyproject.toml README.md ./
 COPY backend/ ./backend/
 COPY scripts/ ./scripts/
 COPY data/ ./data/
+COPY monitoring/ ./monitoring/
+COPY knowledge-base/ ./knowledge-base/
+COPY ai-engine/ ./ai-engine/
 
 RUN pip install --upgrade pip && \
     pip install .
