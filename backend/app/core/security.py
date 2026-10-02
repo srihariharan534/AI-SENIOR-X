@@ -3,8 +3,8 @@
 from datetime import UTC, datetime, timedelta
 from typing import Any
 
-import jwt
 import bcrypt
+import jwt
 
 from backend.app.core.config import settings
 from backend.app.core.exceptions import AuthenticationException
