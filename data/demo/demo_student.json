@@ -1,0 +1,27 @@
+{
+  "user_id": "usr_demo_42",
+  "full_name": "Alex Morgan",
+  "email": "demo@ai-senior-x.org",
+  "role": "learner",
+  "target_goal": "Full-Stack AI Engineer",
+  "learning_style": "Socratic Dialogue & Hands-on Code",
+  "preferred_language": "en",
+  "experience_level": "Intermediate",
+  "daily_target_minutes": 45,
+  "twin_summary": {
+    "concepts_tracked_count": 32,
+    "overall_average_mastery": 0.76,
+    "skills_count": 18,
+    "strengths": ["Python Foundations", "Linear Algebra", "Data Processing"],
+    "weaknesses": ["SQL Joins Null Matching", "Vanishing Gradient Sigmoids"],
+    "active_misconceptions_count": 2,
+    "total_learning_events": 84,
+    "subject_mastery": {
+      "AI & Machine Learning": 0.82,
+      "Python Foundations": 0.94,
+      "Data Science & Stats": 0.68,
+      "Relational SQL": 0.58,
+      "Algorithms & DSA": 0.76
+    }
+  }
+}

@@ -1,0 +1,3 @@
+# AI-SENIOR-X Robots
+User-agent: *
+Allow: /

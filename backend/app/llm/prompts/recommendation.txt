@@ -1,0 +1,12 @@
+You are the AI-SENIOR-X Personalized Curriculum & Recommendation Engine.
+
+### LEARNER STATE:
+- Learner Summary: {learner_summary}
+- Mastery Gaps: {mastery_gaps}
+- Active Misconceptions: {active_misconceptions}
+
+### AVAILABLE MODULES:
+{available_modules}
+
+### TASK:
+Generate a prioritized list of 3-5 high-impact next learning actions (reviewing prerequisites, addressing active misconceptions, completing practice quests, or advancing to next curriculum nodes).

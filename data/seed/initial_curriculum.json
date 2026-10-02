@@ -1,0 +1,45 @@
+{
+  "curriculum_version": "1.0.0",
+  "modules": [
+    {
+      "id": "py-101",
+      "title": "Python Programming & Algorithmic Foundations",
+      "subject": "Computer Science",
+      "description": "Core syntax, data types, asynchronous programming, OOP paradigms, and standard library data structures.",
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "estimated_minutes": 45,
+      "skills": ["python", "asyncio", "object_oriented_programming", "typing"]
+    },
+    {
+      "id": "ai-201",
+      "title": "Deep Learning & Neural Network Architectures",
+      "subject": "Artificial Intelligence",
+      "description": "Multi-layer perceptrons, forward propagation, loss optimization, backpropagation, and PyTorch tensors.",
+      "difficulty": "intermediate",
+      "prerequisites": ["py-101"],
+      "estimated_minutes": 60,
+      "skills": ["pytorch", "backpropagation", "loss_functions", "optimization"]
+    },
+    {
+      "id": "rag-301",
+      "title": "Retrieval-Augmented Generation (RAG) Architecture",
+      "subject": "Artificial Intelligence",
+      "description": "Vector indexing, dense vector search, semantic embeddings, document chunking, and hallucination reduction.",
+      "difficulty": "advanced",
+      "prerequisites": ["ai-201"],
+      "estimated_minutes": 75,
+      "skills": ["rag", "vector_search", "embeddings", "information_retrieval"]
+    },
+    {
+      "id": "agent-401",
+      "title": "Multi-Agent System Orchestration",
+      "subject": "Artificial Intelligence",
+      "description": "Autonomous agents, tool routing, memory hierarchies, reflection loops, and multi-agent coordination.",
+      "difficulty": "advanced",
+      "prerequisites": ["rag-301"],
+      "estimated_minutes": 90,
+      "skills": ["agent_orchestration", "tool_use", "react_framework", "memory_management"]
+    }
+  ]
+}

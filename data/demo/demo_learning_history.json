@@ -1,0 +1,50 @@
+[
+  {
+    "event_id": "ev_01",
+    "timestamp": "2026-09-30T10:30:00Z",
+    "event_type": "practice",
+    "topic_id": "python_basics",
+    "concept_id": "python_loops",
+    "score": 1.0,
+    "details": {
+      "summary": "Passed all test cases for List Comprehensions challenge",
+      "time_spent_seconds": 45
+    }
+  },
+  {
+    "event_id": "ev_02",
+    "timestamp": "2026-09-30T09:15:00Z",
+    "event_type": "tutor",
+    "topic_id": "neural_networks",
+    "concept_id": "gradient_vanishing",
+    "score": 0.85,
+    "details": {
+      "summary": "Socratic dialogue on Sigmoid saturation vs ReLU non-saturation",
+      "turns_count": 4
+    }
+  },
+  {
+    "event_id": "ev_03",
+    "timestamp": "2026-09-29T16:20:00Z",
+    "event_type": "misconception",
+    "topic_id": "sql_joins",
+    "concept_id": "sql_left_join",
+    "score": 0.4,
+    "details": {
+      "summary": "Flagged NULL column matching misconception in SQL query",
+      "severity": "medium"
+    }
+  },
+  {
+    "event_id": "ev_04",
+    "timestamp": "2026-09-28T14:00:00Z",
+    "event_type": "completion",
+    "topic_id": "ml_supervised",
+    "concept_id": "loss_functions",
+    "score": 0.94,
+    "details": {
+      "summary": "Completed Capstone Mission: Neural Classifier",
+      "xp_awarded": 350
+    }
+  }
+]
