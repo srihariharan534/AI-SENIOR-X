@@ -49,12 +49,14 @@ jobs:
 
       - name: Install Frontend Dependencies
         working-directory: frontend
-        run: npm install --legacy-peer-deps --no-audit
+        run: |
+          rm -f package-lock.json
+          npm install --legacy-peer-deps --no-audit
 
       - name: Build Next.js Application
         working-directory: frontend
         env:
-          CI: false
+          CI: "false"
           NEXT_TELEMETRY_DISABLED: 1
           BACKEND_URL: http://127.0.0.1:8000
         run: npm run build
