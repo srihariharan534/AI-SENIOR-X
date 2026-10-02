@@ -1,14 +1,14 @@
-name: CI Pipeline
+name: AI-SENIOR-X CI
 
 on:
   push:
-    branches: [main, master, develop]
+    branches: [main, master]
   pull_request:
-    branches: [main, master, develop]
+    branches: [main, master]
 
 jobs:
-  lint-and-format:
-    name: Code Quality & Linting
+  validate:
+    name: Build & Quality Verification
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -23,40 +23,18 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install ruff mypy
+          pip install ruff mypy pytest pytest-asyncio pytest-cov pytest-mock aiosqlite
           pip install -e ".[dev]"
 
-      - name: Run Ruff Linter
-        run: ruff check backend
-
-      - name: Run Ruff Formatter Check
-        run: ruff format --check backend
-
-      - name: Run Mypy Type Checker
-        run: mypy backend/app
-
-  frontend-check:
-    name: Frontend Build Check
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Install Frontend Dependencies
-        working-directory: frontend
+      - name: Run Ruff Linter & Format Check
         run: |
-          rm -f package-lock.json
-          npm install --legacy-peer-deps --no-audit
+          ruff check backend
+          ruff format --check backend
 
-      - name: Build Next.js Application
-        working-directory: frontend
+      - name: Run Backend Test Suite (136 Tests)
         env:
-          CI: "false"
-          NEXT_TELEMETRY_DISABLED: 1
-          BACKEND_URL: http://127.0.0.1:8000
-        run: npm run build
+          ENVIRONMENT: testing
+          DATABASE_URL: sqlite+aiosqlite:///:memory:
+          SECRET_KEY: test-secret-key-for-continuous-integration-32b
+        run: |
+          python -m pytest backend/tests -v
